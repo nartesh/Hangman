@@ -1,0 +1,131 @@
+/* Stylesheets CSS */
+
+
+/* For all project */
+* {
+	box-sizing: border-box;
+}
+
+/* For all body elements */
+body {
+	background-color: #378999;
+	color: #00256E;
+	font-family: "Papyrus", serif;
+	align-items: left;
+}
+
+h1 {
+	color: #00256E;
+}
+
+/* Construction of the game container */
+.game-container {
+	position: relative;
+	height: 350px;
+	width: 450px;
+}
+
+/* Construct the figures that make up the man for the wrong letters */
+.figure-container {
+	margin: left;
+	fill: transparent;
+	stroke: #000000;
+	stroke-width: 2px;
+	stroke-linecap: round;
+}
+
+.figure-part {
+	display: none;
+}
+
+/* The effects of the wrong words */
+.wrong-letters-container {
+	position: left;
+	top: 30px;
+	right: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Construction of the portion to display the wrong letters */
+.wrong-letters-container p {
+	color:rgba(219, 8, 8, 0.76);
+	text-decoration: underline;
+	margin: 0 0 5px;
+}
+
+/* The wrong letters */
+.wrong-letters-container span {
+	font-size: 20px;
+}
+
+/* Words to guess */
+.word {
+	display: flex;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-95%);
+}
+
+/* The construction of the letters in the game */
+.letter {
+	border-bottom: 3px solid #3FB8BD;
+	display: inline-flex;
+	font-size: 30px;
+	align-items: center;
+	justify-content: center;
+	margin: 0 3px;
+	height: 50px;
+	width: 20px;
+}
+
+/* Basic construction */
+.popup-container {
+	background-color: rgba(0, 0, 0, 0.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/* display: flex; */
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+/* The popup class that contains the display messages */
+.popup {
+	background-color: #3FB8BD;
+	border-radius: 50px 20px;
+	box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+}
+
+/* Button construction */
+.popup button {
+	cursor: pointer;
+	background-color: #1a9f99;
+	color: #f0e2d0;
+	border: 0;
+	margin-top: 20px;
+	padding: 12px 60px;
+	font-size: 16px;
+}
+
+/* Construction of static notification */
+.notification-container {
+	background-color: #3FB8BD;
+	color: #00256E;
+	border-radius: 10px 10px 0 0;
+	padding: 15px 20px;
+	position: absolute;
+	bottom: -100px;
+	transition: transform 0.3s ease-in-out;
+}
+
+/* The notification that will appear on the screen */
+.notification-container.show {
+	transform: translateY(-100px);
+}
