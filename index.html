@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hangman</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>HANGMAN</h1>
+        <div class="game-container">
+		
+			<!-- container for rode and man -->
+            <svg height="200" width="200" class="figure-container">
+                <!-- for rode -->
+                <line x1="60" y1="20" x2="140" y2="20"></line>
+                <line x1="140" y1="20" x2="140" y2="50"></line>
+                <line x1="60" y1="20" x2="60" y2="230"></line>
+                <line x1="20" y1="230" x2="100" y2="230"></line>
+                <!-- for head -->
+                <circle cx="140" cy="70" r="20" class="figure-part"></circle>
+                <!-- for body -->
+                <line x1="140" y1="90" x2="140" y2="150" class="figure-part"></line>
+                <!-- for arm -->
+                <line x1="140" y1="120" x2="120" y2="100" class="figure-part"></line>
+                <line x1="140" y1="120" x2="160" y2="100" class="figure-part"></line>
+                <!--  for legs -->
+                <line x1="140" y1="150" x2="120" y2="180" class="figure-part"></line>
+                <line x1="140" y1="150" x2="160" y2="180" class="figure-part"></line>
+            </svg>
+			
+			<!-- wrong letters entered -->
+            <div class="wrong-letters-container">
+                <div id="wrong-letters"></div>
+            </div>
+			
+			<!-- letters that make up the searched word -->
+            <div class="word" id="word"></div>
+			
+        </div>
+		
+        <!-- notification for final message after guessing the word -->
+        <div class="popup-container" id="popup-container">
+            <div class="popup">
+                <h3 id="final-message">Congratulations!</h3>
+				<!-- button that will be used to start a new game -->
+                <button id="play-button">Play again!</button>
+            </div>
+        </div>
+		
+        <!-- notification for the letter that has already been entered -->
+        <div class="notification-container" id="notification-container">
+			<!-- Notification that will appear if a letter has already been used -->
+            <p>Sorry, you have already tried this letter!</p>
+        </div>
+		
+		<!-- script code -->
+        <script src="script.js"></script>
+		
+    </body>
+</html>
